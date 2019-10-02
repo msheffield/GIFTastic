@@ -24,7 +24,7 @@ $("#add-show").on("click", function (event) {
 });
 
 
-$(".btn").on("click", function () {
+$("#buttons").on("click", ".btn", function () {
     var button = $(this).attr("data-button");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         button + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
