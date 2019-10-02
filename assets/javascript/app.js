@@ -1,17 +1,30 @@
-$("#add-show").on("click", function(event) {
+var shows = ["It's Always Sunny", "Breaking Bad", "The Office", "Stranger Things"];
+
+function generateButtons(shows) {
+    console.log("generate buttons");
+    $("#buttons").empty();
+
+    for (let i = 0; i < shows.length; i++) {
+        let show = shows[i];
+        let button = $("<button>");
+        button.addClass("btn btn-primary");
+        button.attr("data-button", show);
+        button.text(show);
+        $("#buttons").prepend(button);
+    }
+}
+
+generateButtons(shows);
+
+$("#add-show").on("click", function (event) {
     event.preventDefault();
-    let show = $("#show-input").val().trim();
-
-    let button = $("<button>");
-    button.addClass("btn btn-primary");
-    button.attr("data-button", show);
-    button.text(show);
-
-    $("#buttons").prepend(button);
-  });
+    var show = $("#show-input").val().trim();
+    shows.push(show);
+    generateButtons(shows);
+});
 
 
-$("button").on("click", function () {
+$(".btn").on("click", function () {
     var button = $(this).attr("data-button");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         button + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
