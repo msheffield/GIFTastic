@@ -8,9 +8,13 @@ body {
     margin-top: 20px;
 }
 
+button {
+    margin: 5px;
+}
+
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 175px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -20,7 +24,23 @@ body {
     padding-top: 20px;
 }
 
+#title {
+    border: solid black 5px;
+    margin: 0px 5px 10px 5px;
+    background-color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#show-form {
+    border: solid black 1px;
+    margin: 5px;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
 #main {
-    margin-left: 160px; 
+    margin-left: 175px; 
     padding: 0px 10px;
 }

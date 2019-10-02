@@ -1,6 +1,14 @@
+$("#add-show").on("click", function(event) {
+    event.preventDefault();
+    let show = $("#show-input").val().trim();
 
+    let button = $("<button>");
+    button.addClass("btn btn-primary");
+    button.attr("data-button", show);
+    button.text(show);
 
-
+    $("#buttons").prepend(button);
+  });
 
 
 $("button").on("click", function () {

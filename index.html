@@ -24,14 +24,33 @@
 <body>
 
     <div class="sidenav">
-        <div class="row" id="buttons">
+        <div class="row">
             <div class="container-fluid col-md-12 col-xs-4">
-                <form>
-                    
+
+                <div id="title">
+                    <h2>Top Show GifTastic!</h2>
+                </div>
+
+                <form id="show-form">
+                    <label for="t-input">Add Your Favorite Show Here</label>
+                    <input type="text" id="show-input"><br>
+                    <input id="add-show" type="submit" value="Submit">
                 </form>
-                <button class="btn btn-primary" data-button="It's Always Sunny">
-                    It's Always Sunny
-                </button>
+
+                <div id="buttons">
+                    <button class="btn btn-primary" data-button="It's Always Sunny">
+                        It's Always Sunny
+                    </button>
+                    <button class="btn btn-primary" data-button="Brooklyn 99">
+                        Brooklyn 99
+                    </button>
+                    <button class="btn btn-primary" data-button="Rick and Morty">
+                        Rick and Morty
+                    </button>
+                    <button class="btn btn-primary" data-button="The Office">
+                        The Office
+                    </button>
+                </div>
             </div>
 
         </div>
