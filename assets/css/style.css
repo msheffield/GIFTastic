@@ -5,6 +5,7 @@
 body {
     background-image: url("../images/background.jpg");
     background-size: cover;
+    margin-top: 20px;
 }
 
 .sidenav {
@@ -17,9 +18,9 @@ body {
     background-color: grey;
     overflow-x: hidden;
     padding-top: 20px;
-  }
+}
 
-  #main {
+#main {
     margin-left: 160px; 
     padding: 0px 10px;
-  }
+}
