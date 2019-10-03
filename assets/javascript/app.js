@@ -21,6 +21,7 @@ $("#add-show").on("click", function (event) {
     var show = $("#show-input").val().trim();
     shows.push(show);
     generateButtons(shows);
+    $("#show-input").val("");
 });
 
 
@@ -43,7 +44,7 @@ $("#buttons").on("click", ".btn", function () {
         for (var i = 0; i < 9; i++) {
 
             let div = $("<div>");
-            $(div).addClass("col-md-4 col-xs-6 image-thumbnail");
+            $(div).addClass("col-md-4 col-sm-6 col-xs-12 image-thumbnail");
 
             let img = $("<img>");
             img.addClass("gif");
