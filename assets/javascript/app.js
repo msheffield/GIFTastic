@@ -46,13 +46,17 @@ $("#buttons").on("click", ".btn", function () {
             let div = $("<div>");
             $(div).addClass("col-md-4 col-sm-6 col-xs-12 image-thumbnail");
 
+            let p = $("<p>");
+            p.text("Rated: " + results[i].rating);
+            div.append(p);
+
             let img = $("<img>");
             img.addClass("gif");
             img.attr("src", results[i].images.fixed_height_still.url);
             img.attr("data-state", "still");
             img.attr("data-still", results[i].images.fixed_height_still.url);
             img.attr("data-animate", results[i].images.fixed_height.url);
-            div.append(img);
+            div.prepend(img);
             $("#display").prepend(div);
         }
 
